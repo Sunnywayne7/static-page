@@ -23,7 +23,7 @@
 <div class"main">
 <!-- Sidebar -->
  <div class="sidenav">
-   <a id='icons' href='#' onclick="menu_close()"><i class="fa-solid fa-xmark"></i></a>
+   <a id='sidenav' href='#' onclick="menu_close()"><i class="fa-solid fa-xmark"></i></a>
    <h1>Menu</h1>
 
    <ul>
@@ -33,6 +33,9 @@
     <li><a href='link4'>Link 4</a></li>
    </ul>
  </div>
+
+ <!-- Overlay -->
+ <div id="overlay" onclick="menu_close()">
 
 
 <div class="section">
@@ -60,7 +63,6 @@
    <br><br><br><br>
  <div class="para">
    <h2>Heading</h2>
-   <p><i class="fa-solid fa-xmark"></i></p>
    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
     laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
  </div>
@@ -87,17 +89,27 @@
 </div>
 <!-- END MAIN -->
  <script>
-  var Sidebar = Document.getElementById('Sidebar');
+  var sidenav = Document.getElementById('sidenav');
+
+  var overlay = Document.getElementById('overlay');
 
 
   function menu_open(){
-    if (Sidebar.style.display === 'block'){
-      Sidebar.style.display === 'none'
+    if (sidenav.style.display === 'block'){
+      sidenav.style.display === 'none'
+      overlay.style.display === 'none'
 
       else{
-        Sidebar.style.display === 'block'
+        sidenav.style.display === 'block'
+        overlay.style.display === 'block'
       }
     }
+
+  function w3_close() {
+    sidebav.style.display = "none";
+    overlay.style.display = "none";
+
+}
 
   }
  </script>
