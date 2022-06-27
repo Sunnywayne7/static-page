@@ -46,19 +46,77 @@ a:hover{
   background-color:grey;
 }
 
-
-.sidenav{
-  display:none;
-}
-
-#icon{
+.topnav  #icon{
   display:block;
   float:right;
+
 }
 
-#sidenav{
+.sidenav{
+  background-color: #f1f1f1;
+  width:210px;
+  margin-left:-8px;
+  height:100%;
+  position:fixed;
+  float:left;
   display:none;
+  overflow:auto;
+  transition: 0.5s;
+
+
 }
+
+
+
+.sidenav h1{
+  font-family:sans-serif;
+  font-size:22px;
+  padding:10px;
+  margin-top: 50px;
+  margin-left:1px;
+}
+
+.sidenav ul{
+  list-style-type:none;
+  font-family:sans-serif;
+  font-size:20px;
+  padding:0;
+  margin:0;
+  margin-left:1px;
+  float: left;
+  width:100%;
+}
+
+li a{
+  text-decoration:none;
+  display:block;
+  color:black;
+  padding:10px;
+}
+
+li a:hover{
+  color:white;
+  background-color:black;
+}
+.sidenav #sidebar{
+  margin-top: 57px;
+  display:block;
+  float:right;
+  padding-right: 30px;
+  font-size: 30px;
+  font-weight:bolder;
+  color:black;
+}
+
+.sidenav #sidebar:hover{
+color:white;
+background-color: black;
+margin-top:30px;
+padding:23px;
+}
+
+
+
 
 .main{
   float:left;
@@ -154,10 +212,10 @@ a:hover{
    background-color:grey;
  }
 
- .topnav #icon{
-   display:block;
-   float:right;
+ .sidenav{
+   overflow:hidden;
  }
+
 
  .main{
    float:left;
@@ -192,6 +250,11 @@ a:hover{
 }
 
 @media only screen and (min-width:995px){
+  .topnav  #icon{
+    display:none;
+    float:right;
+
+  }
 
   .sidenav{
     background-color: #f1f1f1;
@@ -205,20 +268,7 @@ a:hover{
 
   }
 
-  .sidenav #icons{
-    display:block;
-    color:black;
-    float:right;
-    margin-top:27px;
-    padding:30px;
-    font-size:30px;
-  }
 
-  .sidenav #icons:hover{
-    background-color: black;
-    color:white;
-
-  }
 
   .sidenav h1{
     font-family:sans-serif;
@@ -239,6 +289,22 @@ a:hover{
     width:100%;
   }
 
+  .sidenav #sidebar{
+    margin-top: 57px;
+    display:none;
+    float:right;
+    padding-right: 30px;
+    font-size: 30px;
+    font-weight:bolder;
+    color:black;
+  }
+
+.sidenav #sidebar:hover{
+  color:white;
+  background-color: black;
+  margin-top:30px;
+  padding:2px;
+}
 
 
   li a{
@@ -278,14 +344,6 @@ a:hover{
     margin-left: -6px;
     margin-top:17px;
     width:100%
-
-  }
-
-  }
-
-  .bord{
-    margin-top:-170px;
-    width:15%;
 
   }
 }

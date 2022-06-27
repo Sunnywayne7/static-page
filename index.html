@@ -16,14 +16,14 @@
   <a href='values.html'>Values</a>
   <a href='contact.html'>Contact</a>
   <a href='about.html'>About</a>
-  <a id='icon' href='#' onclick="menu_open()"><i class='fa-solid fa-bars'></i></a>
+  <a id='icon' href='javascript:void(0)' onclick="menu_open()"><i class='fa-solid fa-bars'></i></a>
 </div>
 
 
 <div class"main">
 <!-- Sidebar -->
- <div class="sidenav">
-   <a id='sidenav' href='#' onclick="menu_close()"><i class="fa-solid fa-xmark"></i></a>
+ <div class="sidenav" id="mynav">
+   <a id='sidebar' href='#' onclick="menu_close()"><i class="fa-solid fa-xmark"></i></a>
    <h1>Menu</h1>
 
    <ul>
@@ -89,28 +89,17 @@
 </div>
 <!-- END MAIN -->
  <script>
-  var sidenav = Document.getElementById('sidenav');
+ var mynav = document.getElementById("mynav");
+ function menu_open(){
+   if (mynav.style.display === "block"){
+     mynav.style.display = "none";
+   } else {
+     mynav.style.display = "block";
+   }
+ }
 
-  var overlay = Document.getElementById('overlay');
-
-
-  function menu_open(){
-    if (sidenav.style.display === 'block'){
-      sidenav.style.display === 'none'
-      overlay.style.display === 'none'
-
-      else{
-        sidenav.style.display === 'block'
-        overlay.style.display === 'block'
-      }
-    }
-
-  function w3_close() {
-    sidebav.style.display = "none";
-    overlay.style.display = "none";
-
-}
-
-  }
+ function menu_close(){
+   document.getElementById("mynav").style.display = "none"
+ }
  </script>
 </body>
