@@ -6,6 +6,7 @@ body{
   position:relative;
   padding-bottom:70px;
   min-height: 100vh;
+  margin: 0;
 }
 
 .topnav{
@@ -213,13 +214,23 @@ padding:23px;
 
 .Footer{
 background-color:grey;
-position:absolute;
 height:70px;
 width:100%;
 margin-top:200px;
+top: 0;
+clear: both;
+position: relative;
+margin-top: -200px;
 
+display: flex;
+align-items: center;
+}
 
-
+.Footer p{
+  color:white;
+  margin-left: 10px;
+  font-size:20px;
+  font-family: sans-serif;
 }
 
 
@@ -379,8 +390,6 @@ a:hover{
     width:50%;
     margin-left:210px;
     height:350px;
-    background-color: ;
-
   }
 
    .para h2{
@@ -417,5 +426,14 @@ a:hover{
      margin-left: 5px;
      line-height:2.6;
 
+   }
+
+   .Footer{
+     width:100%;
+     z-index: -1;
+   }
+
+   .Footer p{
+     margin-left:210px;
    }
 }
